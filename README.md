@@ -136,7 +136,7 @@ services:
       - MLMMJADMIN_API_TOKEN='copy_from_iredmail-docker.conf'
       - ROUNDCUBE_DES_KEY='copy_from_iredmail-docker.conf'
       - MYSQL_ROOT_PASSWORD='your_passwords'
-    hostname: mail.esg-tec.com
+    hostname: mail.mydomain.com
     ports:
       - "80:80"
       - "443:443"
@@ -148,17 +148,17 @@ services:
       - "465:465"
       - "587:587"
     volumes:
-      - /home/iredmail/data/backup-mysql:/var/vmail/backup/mysql
-      - /home/iredmail/data/mailboxes:/var/vmail/vmail1
-      - /home/iredmail/data/mlmmj:/var/vmail/mlmmj
-      - /home/iredmail/data/mlmmj-archive:/var/vmail/mlmmj-archive
-      - /home/iredmail/data/imapsieve_copy:/var/vmail/imapsieve_copy
-      - /home/iredmail/data/custom:/opt/iredmail/custom
-      - /home/iredmail/data/ssl:/opt/iredmail/ssl
-      - /home/iredmail/data/mysql:/var/lib/mysql
-      - /home/iredmail/data/clamav:/var/lib/clamav
-      - /home/iredmail/data/sa_rules:/var/lib/spamassassin
-      - /home/iredmail/data/postfix_queue:/var/spool/postfix
+      - /iredmail/data/backup-mysql:/var/vmail/backup/mysql
+      - /iredmail/data/mailboxes:/var/vmail/vmail1
+      - /iredmail/data/mlmmj:/var/vmail/mlmmj
+      - /iredmail/data/mlmmj-archive:/var/vmail/mlmmj-archive
+      - /iredmail/data/imapsieve_copy:/var/vmail/imapsieve_copy
+      - /iredmail/data/custom:/opt/iredmail/custom
+      - /iredmail/data/ssl:/opt/iredmail/ssl
+      - /iredmail/data/mysql:/var/lib/mysql
+      - /iredmail/data/clamav:/var/lib/clamav
+      - /iredmail/data/sa_rules:/var/lib/spamassassin
+      - /iredmail/data/postfix_queue:/var/spool/postfix
       - /etc/letsencrypt/live/mail.mydomain.com:/etc/letsencrypt/live/mail.mydomain.com # New Added
       - /etc/letsencrypt/archive/mail.mydomain.com:/etc/letsencrypt/archive/mail.mydomain.com # New Added
       - iredmail-nginx:/etc/nginx
