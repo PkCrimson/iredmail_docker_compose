@@ -130,12 +130,12 @@ services:
 
     environment:
       - MAIL_THE_TIP_FILE=NO
-      - HOSTNAME=mail.esg-tec.com
-      - FIRST_MAIL_DOMAIN=esg-tec.com
-      - FIRST_MAIL_DOMAIN_ADMIN_PASSWORD=Xinics@510
-      - MLMMJADMIN_API_TOKEN=LokOV6NfQJ8gGOxKUWV6nwTvIsmrqz7BHYr4H9i5zs8=
-      - ROUNDCUBE_DES_KEY=y1DrYyTl0TLtNeh50X26l8YcpEnCNIbm
-      - MYSQL_ROOT_PASSWORD=Xinics@510
+      - HOSTNAME=mail.mydomain.com
+      - FIRST_MAIL_DOMAIN=mydomain.com
+      - FIRST_MAIL_DOMAIN_ADMIN_PASSWORD='your_passwords'
+      - MLMMJADMIN_API_TOKEN='copy_from_iredmail-docker.conf'
+      - ROUNDCUBE_DES_KEY='copy_from_iredmail-docker.conf'
+      - MYSQL_ROOT_PASSWORD='your_passwords'
     hostname: mail.esg-tec.com
     ports:
       - "80:80"
@@ -169,7 +169,12 @@ volumes:
 You can access the Roundcube and admin dashboard throuh:
 ```
 https://mail.mydomain.com #Roundcube
-https://mail.mydomain.com/iredadmin #admin dashboard
+https://mail.mydomain.com/iredadmin #admin dashboard 
+```
+In admin dashboard, 
+```
+login: postmaster@mydomain.com
+pw: `your_passwords`
 ```
 # Configurate the DNS record 
 To successfully send email, you still need to configurate the DNS record
