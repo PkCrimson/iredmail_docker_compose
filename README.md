@@ -1,4 +1,4 @@
-# iredmail_docker
+# iredmail_docker_compose
 Deploying iRedMail through Docker compose and implement cert from Let's Encrypt
 
 # Image
