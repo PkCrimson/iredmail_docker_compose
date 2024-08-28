@@ -186,5 +186,5 @@ Quick MUA Settings
   - IMAP service: port 143 over STARTTLS, or port 993 with SSL.
   - SMTP service: port 587 over STARTTLS, or port 465 with SSL.
   - CalDAV and CardDAV server addresses: https://<server>/SOGo/dav/<full email address>
-Reference: https://docs.iredmail.org/
+- Reference: https://docs.iredmail.org/
 
