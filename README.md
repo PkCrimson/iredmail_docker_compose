@@ -1,5 +1,5 @@
 # iredmail_docker
-Deploying iRedMail through Docker compose
+Deploying iRedMail through Docker compose and implement cert from Let's Encrypt
 
 # Image
 https://hub.docker.com/r/iredmail/mariadb
